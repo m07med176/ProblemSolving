@@ -4,6 +4,7 @@ import org.junit.Before
 import org.junit.Test
 import org.junit.Assert.*
 
+///////////////////
 class PrimeNumberSetBits {
     /**
      * # [762. Prime Number of Set Bits in Binary Representation](https://leetcode.com/problems/prime-number-of-set-bits-in-binary-representation/)
@@ -88,5 +89,4 @@ class PrimeNumberSetBits {
             assertEquals(expectedResult, actualResult)
         }
     }
-
 }

@@ -4,6 +4,6 @@ plugins {
     id("org.jetbrains.dokka") version "1.9.20"
 }
 
-tasks.dokkaGfm {
+tasks.dokkaHtml {
     outputDirectory.set(file("$buildDir/dokka"))
 }

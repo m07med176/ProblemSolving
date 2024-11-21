@@ -72,11 +72,11 @@ class ReverseLinkedList {
 
         while (current != null) {
             val nextTemp = current.next
-            current.next = prev
-            prev = current
+//            prev = current
+//            current.next = prev
+            print("${current.value} ,")
             current = nextTemp
         }
-
         return prev
     }
 
