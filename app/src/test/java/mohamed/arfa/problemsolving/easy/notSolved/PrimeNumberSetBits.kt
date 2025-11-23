@@ -1,6 +1,5 @@
 package mohamed.arfa.problemsolving.easy
 
-import org.junit.Before
 import org.junit.Test
 import org.junit.Assert.*
 

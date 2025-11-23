@@ -1,4 +1,4 @@
-package mohamed.arfa.problemsolving.easy
+package mohamed.arfa.problemsolving.easy.notSolved
 
 import org.junit.Before
 import org.junit.Test

@@ -5,4 +5,11 @@ cmake_minimum_required(VERSION 3.22.1)
 #target_link_libraries(${CMAKE_PROJECT_NAME} android log)
 
 add_library(native-lib SHARED native-lib.cpp)
-target_link_libraries(native-lib ${log-lib})
+add_library(connection-lib SHARED connection.cpp)
+
+# Link dependencies
+target_link_libraries(
+        native-lib
+        ${log-lib}
+        connection-lib
+)

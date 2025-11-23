@@ -5,7 +5,6 @@ import org.junit.Test
 import org.junit.Assert.*
 
 
-////////////
 class SingleNumber {
     /**
      * # [136. Single Number](https://leetcode.com/problems/single-number/)
