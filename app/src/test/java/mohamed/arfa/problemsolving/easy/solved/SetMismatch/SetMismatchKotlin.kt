@@ -5,13 +5,13 @@ import kotlin.math.abs
 
 object SetMismatchKotlin {
     /**
-     * Solution 1: Using HashSet
+     * # Solution 1: Using HashSet
      *
      * Uses a HashSet to track seen numbers and identify the duplicate.
      * Then calculates the missing number using the expected sum formula.
      *
-     * Time Complexity: O(n)
-     * Space Complexity: O(n)
+     * * T-> O(n)
+     * * S-> O(n)
      */
     val solution1 = object : SetMismatch.Solution {
         override fun findErrorNums(nums: IntArray): IntArray {
@@ -72,13 +72,13 @@ object SetMismatchKotlin {
     }
 
     /**
-     * Solution 3: Using Math (Sum Formula)
+     * # Solution 3: Using Math (Sum Formula)
      *
      * Uses mathematical approach with sum formulas to find both numbers.
      * Calculates the difference between expected and actual values.
      *
-     * Time Complexity: O(n)
-     * Space Complexity: O(1)
+     * * T-> O(n)
+     * * S-> O(1)
      */
     val solution3 = object : SetMismatch.Solution {
         override fun findErrorNums(nums: IntArray): IntArray {
@@ -104,13 +104,13 @@ object SetMismatchKotlin {
     }
 
     /**
-     * Solution 4: Using Negation Marking
+     * # Solution 4: Using Negation Marking
      *
      * Marks visited indices by negating values in the array.
      * When we see a negative value, we found the duplicate.
      *
-     * Time Complexity: O(n)
-     * Space Complexity: O(1) - modifies input array
+     * * T-> O(n)
+     * * S-> O(1) - modifies input array
      */
     val solution4 = object : SetMismatch.Solution {
         override fun findErrorNums(nums: IntArray): IntArray {
