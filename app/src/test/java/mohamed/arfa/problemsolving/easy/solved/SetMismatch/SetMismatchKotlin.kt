@@ -4,27 +4,6 @@ import kotlin.math.abs
 
 
 object SetMismatchKotlin {
-    val solution = object : SetMismatch.Solution{
-        /**
-         * # Solution1
-         * - define list of array `result`
-         * - loop in `nums`
-         * - if `index +1` != item add item and `index +1` in `result`
-         * - return `result`
-         */
-        override fun findErrorNums(nums: IntArray): IntArray {
-            val result = mutableListOf<Int>()
-            nums.forEachIndexed { index, item ->
-                if (item != (index + 1)){
-                    result.add(item)
-                    result.add(index + 1)
-                }
-            }
-            return result.toIntArray()
-        }
-
-    }
-
     /**
      * Solution 1: Using HashSet
      *
@@ -59,13 +38,13 @@ object SetMismatchKotlin {
     }
 
     /**
-     * Solution 2: Using Frequency Array
+     * # Solution 2: Using Frequency Array
      *
      * Uses an array to count occurrences of each number.
      * The number with count 2 is duplicate, count 0 is missing.
      *
-     * Time Complexity: O(n)
-     * Space Complexity: O(n)
+     * * T -> O(n)
+     * * S -> O(n)
      */
     val solution2 = object : SetMismatch.Solution {
         override fun findErrorNums(nums: IntArray): IntArray {
