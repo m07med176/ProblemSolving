@@ -4,6 +4,33 @@ import kotlin.math.abs
 
 
 object SetMismatchKotlin {
+
+    /**
+     * # Solution 0: My Solution
+     */
+    val solution0 = object : SetMismatch.Solution {
+        override fun findErrorNums(nums: IntArray): IntArray {
+            val duplicatedArray = mutableListOf<Int>()
+            val missingArray = mutableListOf<Int>()
+
+            val sortedArray =  nums.sorted()
+            sortedArray.forEachIndexed { index, item ->
+                if (index != 0){
+                    val prev = sortedArray[index.minus(1)]
+                    if (item == prev){
+                        duplicatedArray.add(item)
+                    }
+                }
+                
+                val ideal = index.plus(1)
+                if (!sortedArray.contains(ideal)){
+                    missingArray.add(ideal)
+                }
+            }
+            return duplicatedArray.toIntArray()+missingArray.toIntArray()
+        }
+    }
+
     /**
      * # Solution 1: Using HashSet
      *

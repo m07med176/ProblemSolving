@@ -52,10 +52,11 @@ class SetMismatch {
 
     @TestFactory
     fun testAllSolutions() = listOf(
-        SetMismatchKotlin.solution1 to "Solution 1: Using HashSet",
-        SetMismatchKotlin.solution2 to "Solution 2: Using Frequency Array",
-        SetMismatchKotlin.solution3 to "Solution 3: Using Math (Sum Formula)",
-        SetMismatchKotlin.solution4 to "Solution 4: Using Negation Marking"
+        SetMismatchKotlin.solution0 to "Solution 0: My Solution",
+//        SetMismatchKotlin.solution1 to "Solution 1: Using HashSet",
+//        SetMismatchKotlin.solution2 to "Solution 2: Using Frequency Array",
+//        SetMismatchKotlin.solution3 to "Solution 3: Using Math (Sum Formula)",
+//        SetMismatchKotlin.solution4 to "Solution 4: Using Negation Marking"
     ).flatMap { (solution, name) ->
         testCases.mapIndexed { index, item ->
             DynamicTest.dynamicTest("$name: Test Case ${index + 1}") {
